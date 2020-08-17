@@ -241,6 +241,7 @@ states.remove('India')
 states.sort()
 option = st.selectbox("State", states)
 
+
 #Giving the information for each state similar to info for each country
 if( len(option) != 0):
     day_data={}
@@ -300,6 +301,8 @@ if( len(option) != 0):
     
     fig.tight_layout()
     st.plotly_chart(fig,)
+    
+    dfc=dfc.replace("Andaman & Nicobar",'Andaman and Nicobar Islands')
     
     c=dfc[dfc['State']==option]['Confirmed Cases'].iloc[0]
     d=dfc[dfc['State']==option]['Deceased'].iloc[0]
