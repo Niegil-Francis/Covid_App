@@ -300,7 +300,7 @@ if( len(option) != 0):
     
     
     fig.tight_layout()
-    st.plotly_chart(fig,)
+    st.plotly_chart(fig)
     
     dfc=dfc.replace("Andaman & Nicobar",'Andaman and Nicobar Islands')
     
