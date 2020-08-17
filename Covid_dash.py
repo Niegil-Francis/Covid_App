@@ -95,7 +95,7 @@ st.write("Fatality Rate:",round((d/c)*100,2),'%')
 #Getting a list of all the unique contries present after removing 'World'
 countries=list(set(df1.location))
 countries.remove('World')
-
+countries.sort()
 #The dropdown for selecting the country 
 option1 = st.selectbox("Country",countries)
 
@@ -238,6 +238,7 @@ st.write("Recovery Rate:",round((r/c)*100,2),'%')
 
 #Removing India from the list of states
 states.remove('India')
+states.sort()
 option = st.selectbox("State", states)
 
 #Giving the information for each state similar to info for each country
@@ -298,7 +299,7 @@ if( len(option) != 0):
     
     
     fig.tight_layout()
-    st.plotly_chart(fig,plot_bgcolor='white')
+    st.plotly_chart(fig,)
     
     c=dfc[dfc['State']==option]['Confirmed Cases'].iloc[0]
     d=dfc[dfc['State']==option]['Deceased'].iloc[0]
