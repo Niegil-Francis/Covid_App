@@ -143,7 +143,7 @@ if analysis == "Overview":
             color='location',
             tooltip = ['location','total_cases'],
             ).properties(
-            width=800,
+            width=750,
             height=300
             ).configure_axis(
             labelFontSize=10,
