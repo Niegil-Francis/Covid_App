@@ -339,6 +339,8 @@ elif analysis == "Trend":
         fig = plt.figure(figsize=(16,10))
         ax = fig.gca()
         ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f M'))
+        ax.set_xtitle("Date")
+        ax.set_ytitle("Global Cases")
         ax.plot(trend1[-7:],"ro")
         ax.plot(trend1[-7:],alpha = 0.2)
         st.write(fig)
@@ -350,5 +352,7 @@ elif analysis == "Trend":
         ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f M'))
         ax.plot(trend1[-30:],"ro")
         ax.plot(trend1[-30:],alpha = 0.2)
+        ax.set_xtitle("Date")
+        ax.set_ytitle("Global Cases")
         st.write(fig)
     
