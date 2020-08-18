@@ -334,6 +334,7 @@ elif analysis == "Fatalities":
 elif analysis == "Trend":
     t1 = st.selectbox("Global cases trend",["Past week","Past month"])
     df = pd.read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv")
+    df=df[(df.location!='World') & (df.location!='International')]
     trend1 = (df.groupby("date").sum()["total_cases"]/float(1e6))
     if t1 == "Past week":
         fig = plt.figure(figsize=(16,10))
