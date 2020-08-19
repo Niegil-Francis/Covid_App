@@ -11,7 +11,7 @@ The sources of the data used for this app are:
 2. [api.covid19india.org](https://api.covid19india.org)
 3. [https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv](https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv)
 
-Contributors: Niegil, Praneetha and Sakthisree.
+Contributors: [Niegil](https://github.com/Niegil-Francis), [Praneetha](https://github.com/1461praneetha) and [Sakthisree](https://github.com/Sakzsee).
 
 Link to access the app: [Covid-19 Global Dashboard](https://guarded-island-68370.herokuapp.com/).
 
