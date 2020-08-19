@@ -12,7 +12,7 @@ Contributors: Niegil, Praneetha and Sakthisree.
 
 Link to access the app: [Covid_app](https://guarded-island-68370.herokuapp.com/).
 
-In order to run the app locally and make changes locally:
+In order to run the app locally:
 1. Install streamlit: pip install streamlit
 2. Clone the repository: git clone https://github.com/Niegil-Francis/Covid_App.git
 3. Install the required packages present in requirements.txt
