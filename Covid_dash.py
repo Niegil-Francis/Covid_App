@@ -9,6 +9,9 @@ import altair as alt
 import numpy as np
 from matplotlib.ticker import FormatStrFormatter
 
+# Reading the world data from covid.ourworldindata.org
+# The data is cumulative, so the total_cases for a day sums up the cases per day 
+df1= pd.read_csv("https://covid.ourworldindata.org/data/ecdc/full_data.csv")
 analysis = st.sidebar.selectbox("Analysis",["Overview","Fatalities","Trend"])
 if analysis == "Overview":
     o1 = st.selectbox("Dashboards",["Global","India"])
@@ -22,9 +25,8 @@ if analysis == "Overview":
             ''',unsafe_allow_html=True
         )
         st.header(" ")
-        # Reading the world data from covid.ourworldindata.org
-        # The data is cumulative, so the total_cases for a day sums up the cases per day  
-        df1= pd.read_csv("https://covid.ourworldindata.org/data/ecdc/full_data.csv")
+         
+        
         #Getting the unique dates present in the dataset
         dates=list(set(df1.date))
         #Sorting the dates to get the most recent date
@@ -344,7 +346,7 @@ elif analysis == "Fatalities":
 #for adding units to axes
 elif analysis == "Trend":
     t1 = st.selectbox("Global cases trend",["Past week","Past month"])
-    df = pd.read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv")
+    df = df1
     df=df[(df.location!='World') & (df.location!='International')]
     trend1 = (df.groupby("date").sum()["total_cases"]/float(1e6))
     if t1 == "Past week":
@@ -353,17 +355,17 @@ elif analysis == "Trend":
         ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f M'))
         ax.set_xlabel("Date",fontsize=23)
         ax.set_ylabel("Global Cases",fontsize=23)
-        ax.plot(trend1[-7:],"ro")
-        ax.plot(trend1[-7:],alpha = 0.2)
+        ax.plot(trend1[-8:-1],"ro")
+        ax.plot(trend1[-8:-1],alpha = 0.2)
         st.write(fig)
     elif t1 == "Past month":
         fig = plt.figure(figsize=(16,10))
         ax = fig.gca()
         ax.set_xticks([0,4,9,14,19,24,29])
-        ax.set_xticklabels([trend1.index[-30],trend1.index[-25],trend1.index[-20],trend1.index[-15],trend1.index[-10],trend1.index[-5],trend1.index[-1]])
+        ax.set_xticklabels([trend1.index[-31],trend1.index[-26],trend1.index[-21],trend1.index[-16],trend1.index[-11],trend1.index[-6],trend1.index[-2]])
         ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f M'))
-        ax.plot(trend1[-30:],"ro")
-        ax.plot(trend1[-30:],alpha = 0.2)
+        ax.plot(trend1[-31:-1],"ro")
+        ax.plot(trend1[-31:-1],alpha = 0.2)
         ax.set_xlabel("Date",fontsize=23)
         ax.set_ylabel("Global Cases",fontsize=23)
         st.write(fig)
