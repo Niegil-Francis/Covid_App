@@ -13,7 +13,7 @@ The sources of the data used for this app are:
 
 Contributors: Niegil, Praneetha and Sakthisree.
 
-Link to access the app: [Covid_app](https://guarded-island-68370.herokuapp.com/).
+Link to access the app: [Covid-19 Global Dashboard](https://guarded-island-68370.herokuapp.com/).
 
 In order to run the app locally:
 1. Install streamlit: pip install streamlit
