@@ -62,20 +62,31 @@ if analysis == "Overview":
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top',
-            'font':{ 'color':'Black', 'size':50}},
+            'font':{ 'color':'Black', 'size':30}},
             geo=dict(                         #Removing the frame borders and giving the projection type
             showframe=False,
             showcoastlines=True,
-            projection_type='equirectangular'
-        ))
-        st.plotly_chart(fig1)
+            ),
+            margin= dict(
+                l= 0,
+                r= 0,
+                b= 0,
+                t= 0,
+                pad=0
+            ))
+        st.plotly_chart(fig1,config = {'displayModeBar': False})
         #Printing out the statistics of the world for the most recent date
         st.header("World Statistics")
         c=world['total_cases'].iloc[0]
         d=world['total_deaths'].iloc[0]
-        st.write("Confirmed Cases:",c)
-        st.write("Confirmed Deaths:",d)
+        st.write("Confirmed Cases:",int(c))
+        st.write("Confirmed Deaths:",int(d))
         st.write("Fatality Rate:",round((d/c)*100,2),'%')
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.header("Country-wise statistics")
         #Getting a list of all the unique contries present after removing 'World'
         countries=list(set(df1.location))
         countries.remove('World')
@@ -116,12 +127,12 @@ if analysis == "Overview":
             ax1.spines['right'].set_visible(False)
             ax1.spines['top'].set_visible(False)
             fig.tight_layout()
-            st.plotly_chart(fig)
+            st.plotly_chart(fig,config = {'displayModeBar': False})
             # Printing out information for the country for the most recent date
             c=td[td['location']==option1.lower()]['total_cases'].iloc[0]
             d=td[td['location']==option1.lower()]['total_deaths'].iloc[0]
-            st.write("Confirmed Cases:",c)
-            st.write("Confirmed Deaths:",d)
+            st.write("Confirmed Cases:",int(c))
+            st.write("Confirmed Deaths:",int(d))
             st.write("Fatality Rate:",round((d/c)*100,2),'%')
         df = df1
         df=df[(df.location!='World') & (df.location!='International')]
@@ -201,16 +212,16 @@ if analysis == "Overview":
                 'yanchor': 'top',
             'font':{ 'color':'blue', 'size':40}}
         )
-        st.plotly_chart(fig2)
+        st.plotly_chart(fig2,config = {'displayModeBar': False})
         #Printing out India's stats 
         st.header("India Statistics")
         c=India['Confirmed Cases'].iloc[0]
         d=India['Deceased'].iloc[0]
         r=India['Recovered'].iloc[0]
-        st.write("Confirmed Cases:",c)
-        st.write("Confirmed Deaths:",d)
-        st.write("Recovered:",r)
-        st.write("Current Cases:",c-d-r)
+        st.write("Confirmed Cases:",int(c))
+        st.write("Confirmed Deaths:",int(d))
+        st.write("Recovered:",int(r))
+        st.write("Current Cases:",int(c-d-r))
         st.write("Fatality Rate:",round((d/c)*100,2),'%')
         st.write("Recovery Rate:",round((r/c)*100,2),'%')
         #Removing India from the list of states
@@ -259,15 +270,15 @@ if analysis == "Overview":
             ax2.spines['right'].set_visible(False)
             ax2.spines['top'].set_visible(False)
             fig.tight_layout()
-            st.plotly_chart(fig)
+            st.plotly_chart(fig,config = {'displayModeBar': False})
             dfc=dfc.replace("Andaman & Nicobar",'Andaman and Nicobar Islands')
             c=dfc[dfc['State']==option]['Confirmed Cases'].iloc[0]
             d=dfc[dfc['State']==option]['Deceased'].iloc[0]
             r=dfc[dfc['State']==option]['Recovered'].iloc[0]
-            st.write("Confirmed Cases:",c)
-            st.write("Confirmed Deaths:",d)
-            st.write("Recovered:",r)
-            st.write("Current Cases:",c-d-r)
+            st.write("Confirmed Cases:",int(c))
+            st.write("Confirmed Deaths:",int(d))
+            st.write("Recovered:",int(r))
+            st.write("Current Cases:",int(c-d-r))
             st.write("Fatality Rate:",round((d/c)*100,2),'%')
             st.write("Recovery Rate:",round((r/c)*100,2),'%')
 
