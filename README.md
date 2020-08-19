@@ -2,9 +2,9 @@
 
 Amidst the unfortunate chaos of COVID-19 around the world, there has been an overload of information regarding the pandemic present online. With such massive amounts of data, it is crucial not only to identify and collect verified information, but to also structure it in a way that allows us to pick worthy insights. In this context, data visualization is perfect for enabling quick and accurate comprehension of information, whilst providing the relevant insights into our current global situation.
 
-For this exact purpose, we have created a "Covid-19 Global Dashboard" that provides an interactive visualization of the current spread of COVID-19 around the world. Within this dashboard, you can find an overview of both worldwide & country specific statistics. We hope that our dashboard can help explain the developing pandemic events in a clear and comprehensible way for people to interpret data efficiently, tease out patterns, and pick up on trends. 
+For this exact purpose, we have created a "Covid-19 Global Dashboard" - an interactive visualization of the current spread of COVID-19 around the world. Within this dashboard, you can find an overview of both worldwide & country specific statistics. We hope that our dashboard can help explain the developing pandemic events in a clear and comprehensible way for people to interpret data efficiently, tease out patterns, and pick up on trends. 
 
-Our future work would involve further exploring into patterns of correlation between age demographics, life expectancy rates and exploration of other factors - and also a possibilty of creation of a predictive model that can arrive at the trend of upcoming cases.
+Our future work would involve further exploring into patterns of correlation between age demographics, life expectancy rates and exploration of other factors that may or may not be intuitively obvious - and also a possibilty of creation of a predictive model that can arrive at the trend of upcoming cases.
 
 The dashboard is created with Streamlit using Altair, Plotly and Matplotlib for visualization and deployed using Heroku. 
 
