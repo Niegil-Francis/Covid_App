@@ -343,7 +343,6 @@ elif analysis == "Fatalities":
         ax.spines['left'].set_visible(False)
         st.write(fig)
 
-#for adding units to axes
 elif analysis == "Trend":
     t1 = st.selectbox("Global cases trend",["Past week","Past month"])
     df = df1
@@ -352,7 +351,7 @@ elif analysis == "Trend":
     if t1 == "Past week":
         fig = plt.figure(figsize=(16,10))
         ax = fig.gca()
-        ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f M'))
+        ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f M')) #adding unit to y-axis values
         ax.set_xlabel("Date",fontsize=23)
         ax.set_ylabel("Global Cases",fontsize=23)
         ax.plot(trend1[-8:-1],"ro")
