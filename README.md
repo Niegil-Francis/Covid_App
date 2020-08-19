@@ -1,6 +1,6 @@
 # Covid-19 Global Dashboard
 
-Amidst the unfortunate chaos of COVID-19 around the world, there has been an overload of information regarding the pandemic present online. With such massive amounts of data, it is crucial not only to identify and collect verified information, but to also structure it in a way that allows us to pick up worthy insights. In this context, data visualization is perfect for enabling quick and accurate comprehension of information, whilst providing the relevant insights into our current global situation.
+Amidst the unfortunate chaos of COVID-19 around the world, there has been an overload of information regarding the pandemic present online. With such massive amounts of data, it is crucial not only to identify and collect verified information, but to also structure it in a way that allows us to pick worthy insights. In this context, data visualization is perfect for enabling quick and accurate comprehension of information, whilst providing the relevant insights into our current global situation.
 
 For this exact purpose, we have created a "Covid-19 Global Dashboard" that provides an interactive visualization of the current spread of COVID-19 around the world. Within this dashboard, you can find an overview of both worldwide & country specific statistics.
 
