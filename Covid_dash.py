@@ -92,7 +92,10 @@ if analysis == "Overview":
         #Getting a list of all the unique contries present after removing 'World'
         countries=list(set(df1.location))
         countries.remove('World')
+        countries.remove('International')
         countries.sort()
+        countries.remove('India')
+        countries.insert(0,'India')
         #The dropdown for selecting the country 
         option1 = st.selectbox("Country",countries)
         #Checking if there is a country selected and if there is, give its information
@@ -227,8 +230,7 @@ if analysis == "Overview":
         st.write("Fatality Rate:",round((d/c)*100,2),'%')
         st.write("Recovery Rate:",round((r/c)*100,2),'%')
         #Removing India from the list of states
-        states.remove('India')
-        states.sort()
+        states=list(dfc.sort_values(by=['Confirmed Cases','Deceased'], ascending=[False, False]).State)
         option = st.selectbox("State", states)
         #Giving the information for each state similar to info for each country
         if( len(option) != 0):
