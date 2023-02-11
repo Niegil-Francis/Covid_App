@@ -11,7 +11,8 @@ from matplotlib.ticker import FormatStrFormatter
 
 # Reading the world data from covid.ourworldindata.org
 # The data is cumulative, so the total_cases for a day sums up the cases per day 
-df1= pd.read_csv("https://covid.ourworldindata.org/data/ecdc/full_data.csv")
+# df1= pd.read_csv("https://covid.ourworldindata.org/data/ecdc/full_data.csv")
+df1= pd.read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/archived/ecdc/full_data.csv")
 analysis = st.sidebar.selectbox("Analysis",["Overview","Fatalities","Trend"])
 if analysis == "Overview":
     o1 = st.selectbox("Dashboards",["Global","India"])

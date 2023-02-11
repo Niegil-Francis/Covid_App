@@ -15,7 +15,9 @@ The sources of the data used for this app are:
 
 Contributors: [Niegil](https://github.com/Niegil-Francis), [Praneetha](https://github.com/1461praneetha) and [Sakthisree](https://github.com/Sakzsee).
 
-Link to access the app: [Covid-19 Global Dashboard](https://covid19-overview.herokuapp.com/).
+<!-- Link to access the app: [Covid-19 Global Dashboard](https://covid19-overview.herokuapp.com/). -->
+The app can be seen below
+<img src="Covid_dash.gif" alt="App" width="1000"/>
 
 In order to run the app locally:
 1. Install streamlit: pip install streamlit
